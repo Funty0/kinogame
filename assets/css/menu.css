@@ -1,0 +1,45 @@
+/* Меню игр. */
+.menu { max-width: 1180px; margin: 0 auto; padding: 56px 24px 64px; }
+.hero { text-align: center; margin-bottom: 40px; }
+.hero h1 { margin: 0 0 10px; font-size: clamp(30px, 4vw, 44px); font-weight: 800; letter-spacing: -.02em; }
+.hero p { margin: 0 auto; max-width: 560px; color: var(--muted); font-size: 15.5px; }
+
+.games { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 24px; }
+.game {
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 22px;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.game:hover { transform: translateY(-3px); border-color: var(--border-2); box-shadow: var(--shadow); }
+.game-art { position: relative; height: 250px; overflow: hidden; background: var(--bg-2); border-bottom: 1px solid var(--border); }
+.game-body { display: flex; flex-direction: column; gap: 14px; padding: 22px 24px 24px; flex: 1; }
+.game-title { display: flex; align-items: center; gap: 12px; }
+.game-title h2 { margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+.game-icon { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 11px; background: var(--accent-soft); color: #8fb6ff; }
+.game-icon.gold { background: rgba(245, 192, 74, .14); color: var(--gold); }
+.game-body p { margin: 0; color: var(--muted); font-size: 14.5px; flex: 1; }
+.game-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.game-foot .status { color: #c9ced8; font-weight: 600; font-size: 13.5px; min-width: 0; }
+.progress { height: 6px; border-radius: 6px; background: var(--panel-3); overflow: hidden; }
+.progress i { display: block; height: 100%; border-radius: 6px; background: linear-gradient(90deg, var(--accent), var(--violet)); }
+
+.mini { width: 42px; aspect-ratio: 2 / 3; border-radius: 5px; overflow: hidden; flex: none; font-size: 6px; }
+.tier-art { display: flex; flex-direction: column; gap: 6px; padding: 18px 22px; }
+.tier-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 60%, var(--bg-2)); pointer-events: none; }
+.art-row { display: flex; align-items: center; gap: 10px; padding: 4px; border-radius: 9px; background: var(--panel); border-left: 3px solid var(--c); }
+.art-label { width: 96px; padding-left: 6px; font-weight: 700; font-size: 12px; color: var(--c); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.art-items { display: flex; gap: 5px; }
+.art-items .mini { width: 32px; }
+
+.battle-art { display: flex; align-items: center; justify-content: center; gap: 0; }
+.battle-art::before { content: ""; position: absolute; inset: 0; background: radial-gradient(50% 70% at 50% 50%, rgba(124, 92, 246, .22), transparent 70%); }
+.vs-card { position: relative; width: 128px; aspect-ratio: 2 / 3; border-radius: 12px; overflow: hidden; box-shadow: 0 14px 40px rgba(0, 0, 0, .55); font-size: 12px; transition: transform .3s; }
+.vs-card.left { transform: rotate(-7deg) translateX(14px); }
+.vs-card.right { transform: rotate(7deg) translateX(-14px); }
+.game:hover .vs-card.left { transform: rotate(-9deg) translateX(4px); }
+.game:hover .vs-card.right { transform: rotate(9deg) translateX(-4px); }
+.vs-mark {
+  position: relative; z-index: 2; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--violet)); color: #fff; font-weight: 800; font-size: 16px;
+  box-shadow: 0 0 0 6px var(--bg-2), 0 8px 30px rgba(80, 100, 246, .45);
+}
