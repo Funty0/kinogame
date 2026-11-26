@@ -24,8 +24,8 @@
   const placed = new Set((tier?.tiers || []).flatMap((t) => t.items).filter((id) => byId.has(id) && !removed.has(id)));
   const inGame = films.length - removed.size;
   const tierRows = (tier?.tiers?.length ? tier.tiers : [
-    { name: 'Рекомендую', color: '#a46cff' }, { name: 'Интересное', color: '#3ccf7a' },
-    { name: 'Среднее', color: '#3d8bfd' }, { name: 'Плохое', color: '#f0524f' },
+    { name: 'Рекомендую', color: '#2ec8d6' }, { name: 'Интересное', color: '#3ccf7a' },
+    { name: 'Среднее', color: '#f5b83d' }, { name: 'Плохое', color: '#f0524f' },
   ]).slice(0, 4);
   const tierStatus = !placed.size ? 'Ещё не начат'
     : placed.size >= inGame ? `Готово: все ${CG.plural(inGame, 'фильм', 'фильма', 'фильмов')} распределены`
