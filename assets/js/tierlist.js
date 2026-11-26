@@ -15,7 +15,7 @@
   document.querySelectorAll('[data-site-title]').forEach((el) => { el.textContent = title; });
 
   const COLORS = ['#3ccf7a', '#3d8bfd', '#f5b83d', '#f0524f', '#a46cff', '#ff7ac6', '#2ec8d6', '#9aa3b2'];
-  const DEFAULT_TIERS = [['Рекомендую', '#3ccf7a'], ['Интересное', '#3d8bfd'], ['Среднее', '#f5b83d'], ['Плохое', '#f0524f']];
+  const DEFAULT_TIERS = [['Рекомендую', '#a46cff'], ['Интересное', '#3ccf7a'], ['Среднее', '#3d8bfd'], ['Плохое', '#f0524f']];
   const SIZES = ['s', 'm', 'l'];
   const SORTS = { title: 'По названию', kp: 'По рейтингу КП', year: 'Сначала новые', random: 'Вперемешку' };
   const POOL = 'pool';
